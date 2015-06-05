@@ -195,16 +195,26 @@
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
     <Content Include="App\Main\app.js" />
     <Content Include="App\Main\images\abp-logo.png" />
+    <Content Include="App\Main\images\freight.svg" />
+    <Content Include="App\Main\images\freights.svg" />
+    <Content Include="App\Main\images\home.svg" />
+    <Content Include="App\Main\images\offers.svg" />
+    <Content Include="App\Main\images\truck.svg" />
+    <Content Include="App\Main\images\trucks.svg" />
     <Content Include="App\Main\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
     <Content Include="App\Main\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="App\Main\views\freight\add.js" />
+    <Content Include="App\Main\views\freight\search.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
-    <Content Include="App\Main\views\about\about.js" />
+    <Content Include="App\Main\views\offers\offers.js" />
+    <Content Include="App\Main\views\truck\add.js" />
+    <Content Include="App\Main\views\truck\search.js" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -255,8 +265,9 @@
     <Content Include="Global.asax" />
     <Content Include="Localization\AbpWeb\AbpWeb.tr.xml" />
     <Content Include="Localization\AbpWeb\AbpWeb.xml" />
-    <Content Include="Localization\Exchange\Exchange.tr.xml" />
-    <Content Include="Localization\Exchange\Exchange.xml" />
+    <Content Include="Localization\Exchange\Exchange.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -291,7 +302,6 @@
     <Content Include="App\Main\main.less" />
     <Content Include="App\Main\views\layout\layout.cshtml" />
     <Content Include="App\Main\views\home\home.cshtml" />
-    <Content Include="App\Main\views\about\about.cshtml" />
     <Content Include="App\Main\web.config" />
     <Content Include="log4net.config" />
     <Content Include="App\Main\views\layout\header.cshtml" />
@@ -323,6 +333,11 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="App\Main\views\freight\add.cshtml" />
+    <Content Include="App\Main\views\truck\add.cshtml" />
+    <Content Include="App\Main\views\freight\search.cshtml" />
+    <Content Include="App\Main\views\truck\search.cshtml" />
+    <Content Include="App\Main\views\offers\offers.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

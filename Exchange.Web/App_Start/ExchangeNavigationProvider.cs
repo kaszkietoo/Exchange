@@ -16,19 +16,46 @@ namespace Exchange.Web
             context.Manager.MainMenu
                 .AddItem(
                     new MenuItemDefinition(
-                        "Home",
+                        "Start",
                         new LocalizableString("HomePage", ExchangeConsts.LocalizationSourceName),
                         url: "#/",
-                        icon: "fa fa-home"
-                        )
-                ).AddItem(
+                        icon: "/App/Main/images/home.svg"
+                        ))
+                .AddItem(
                     new MenuItemDefinition(
-                        "About",
-                        new LocalizableString("About", ExchangeConsts.LocalizationSourceName),
-                        url: "#/about",
-                        icon: "fa fa-info"
-                        )
-                );
+                        "ReportFreight",
+                        new LocalizableString("ReportFreight", ExchangeConsts.LocalizationSourceName),
+                        url: "#/freight/add",
+                        icon: "/App/Main/images/freight.svg"
+                        ))
+                .AddItem(
+                    new MenuItemDefinition(
+                        "SearchFreights",
+                        new LocalizableString("SearchFreights", ExchangeConsts.LocalizationSourceName),
+                        url: "#/freight/search",
+                        icon: "/App/Main/images/freights.svg"
+                        ))
+                .AddItem(
+                    new MenuItemDefinition(
+                        "ReportTruck",
+                        new LocalizableString("ReportTruck", ExchangeConsts.LocalizationSourceName),
+                        url: "#/truck/add",
+                        icon: "/App/Main/images/truck.svg"
+                        ))                
+                .AddItem(
+                    new MenuItemDefinition(
+                        "SearchTrucks",
+                        new LocalizableString("SearchTrucks", ExchangeConsts.LocalizationSourceName),
+                        url: "#/truck/search",
+                        icon: "/App/Main/images/trucks.svg"
+                        ))
+                .AddItem(
+                    new MenuItemDefinition(
+                        "MyOffers",
+                        new LocalizableString("MyOffers", ExchangeConsts.LocalizationSourceName),
+                        url: "#/offers",
+                        icon: "/App/Main/images/offers.svg"
+                        ));
         }
     }
 }

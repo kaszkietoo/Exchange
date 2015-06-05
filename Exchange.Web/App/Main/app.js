@@ -18,15 +18,35 @@
         function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
             $stateProvider
-                .state('home', {
+                .state('start', {
                     url: '/',
                     templateUrl: '/App/Main/views/home/home.cshtml',
-                    menu: 'Home' //Matches to name of 'Home' menu in ExchangeNavigationProvider
+                    menu: 'Start' //Matches to name of 'Home' menu in ExchangeNavigationProvider
                 })
-                .state('about', {
-                    url: '/about',
-                    templateUrl: '/App/Main/views/about/about.cshtml',
-                    menu: 'About' //Matches to name of 'About' menu in ExchangeNavigationProvider
+                .state('reportFreight', {
+                    url: '/freight/add',
+                    templateUrl: '/App/Main/views/freight/add.cshtml',
+                    menu: 'ReportFreight'
+                })
+                .state('searchFreights', {
+                    url: '/freight/search',
+                    templateUrl: '/App/Main/views/freight/search.cshtml',
+                    menu: 'SearchFreights'
+                })
+                .state('reportTruck', {
+                    url: '/truck/add',
+                    templateUrl: '/App/Main/views/truck/add.cshtml',
+                    menu: 'ReportTruck'
+                })
+                .state('searchTrucks', {
+                    url: '/truck/search',
+                    templateUrl: '/App/Main/views/truck/search.cshtml',
+                    menu: 'SearchTrucks'
+                })
+                .state('myOffers', {
+                    url: '/offers',
+                    templateUrl: '/App/Main/views/offers/offers.cshtml',
+                    menu: 'MyOffers'
                 });
         }
     ]);

@@ -44,10 +44,10 @@
 <body>
     <div ng-app="app">
         <div ng-controller="app.views.layout as vm">
-            <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
-            <div class="container">
+            <div ng-include="'/App/Main/views/layout/header.cshtml'" class="col-md-3"></div>
+            <div class="container col-md-9">
                 <div class="angular-animation-container row">
-                    <div ui-view class="shuffle-animation col-xs-12"></div>
+                    <div ui-view class="shuffle-animation col-md-11"></div>
                 </div>
             </div>
         </div>
