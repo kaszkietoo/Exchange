@@ -30,18 +30,18 @@ namespace Exchange.Web
                         ))
                 .AddItem(
                     new MenuItemDefinition(
-                        "SearchFreights",
-                        new LocalizableString("SearchFreights", ExchangeConsts.LocalizationSourceName),
-                        url: "#/freight/search",
-                        icon: "/App/Main/images/freights.svg"
-                        ))
-                .AddItem(
-                    new MenuItemDefinition(
                         "ReportTruck",
                         new LocalizableString("ReportTruck", ExchangeConsts.LocalizationSourceName),
                         url: "#/truck/add",
                         icon: "/App/Main/images/truck.svg"
-                        ))                
+                        ))
+                .AddItem(
+                    new MenuItemDefinition(
+                        "SearchFreights",
+                        new LocalizableString("SearchFreights", ExchangeConsts.LocalizationSourceName),
+                        url: "#/freight/search",
+                        icon: "/App/Main/images/freights.svg"
+                        ))                                
                 .AddItem(
                     new MenuItemDefinition(
                         "SearchTrucks",

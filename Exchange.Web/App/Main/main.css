@@ -34,3 +34,38 @@ body {
   left: 2em;
   opacity: 0;
 }
+
+.rounded {
+    border-radius: 4px;
+}
+
+.stretched {
+    width: 100%;
+}
+
+.input-size-cargo {
+    height: 30px;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-table-row {
+    display: table-row;
+    height: 45px;    
+}
+
+.display-table-cell {
+    display: table-cell;    
+}
+
+.display-direction-indicator {    
+    font-size: 2em;
+    margin-top: 40px;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
