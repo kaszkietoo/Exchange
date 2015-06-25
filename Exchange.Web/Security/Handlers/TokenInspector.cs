@@ -34,9 +34,8 @@ namespace Exchange.Web.Security
                 string encryptedToken = request.Headers.GetValues(TOKEN_NAME).First();
                 try
                 {
-                    Token token = Token.Decrypt(encryptedToken);                    
-                    
-                    user = await _userManager.FindByNameAsync(token.UserId);
+                    Token token = Token.Decrypt(encryptedToken);                                        
+                    user = await _userManager.FindByNameOrEmailAsync(token.UserId);
                     bool isValidUserId = user != null && user.IsActive;                    
                     bool requestIPMatchesTokenIP = token.IP.Equals(request.GetClientIP());
                     
