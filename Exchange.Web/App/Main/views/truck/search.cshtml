@@ -1,3 +1,38 @@
 ﻿<div ng-controller="app.views.truck.search as vm">
-    <p>Search trucks</p>
+    <h4><span class="label label-primary rounded">Filtruj</span></h4>
+    <div id="route-filter">
+        <div class="panel panel-default rounded">
+            <div class="panel-body">
+                <div id="route-from" class="col-md-5 display-table">
+                    <div id="route-from-country" class="display-table-row">
+                        <label for="country-from" class="display-table-cell">Kraj</label>
+                        <select id="country-from" class="input-size-cargo rounded display-table-cell">
+                            <option value="PL">PL Polska</option>
+                            <option value="GB">GB Wielka Brytania</option>
+                        </select>
+                    </div>
+                    <div id="route-from-city" class="display-table-row">
+                        <label for="city-from" class="display-table-cell">Miejscowość (kod)</label>
+                        <input id="city-from" type="text" class="input-size-cargo rounded display-table-cell align-input-text" value="(30-072) Kraków" />
+                    </div>
+                </div>
+                <div id="direction-indicator" class="col-md-2 display-direction-indicator place-direction-indicator-filter" style="text-align: center;">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" />
+                </div>
+                <div id="route-to" class="col-md-5 display-table">
+                    <div id="route-to-country" class="display-table-row">
+                        <label for="country-to" class="display-table-cell">Kraj</label>
+                        <select id="country-to" class="input-size-cargo rounded display-table-cell">
+                            <option value="PL">PL Polska</option>
+                            <option value="GB">GB Wielka Brytania</option>
+                        </select>
+                    </div>
+                    <div id="route-to-city" class="display-table-row">
+                        <label for="city-to" class="display-table-cell">Miejscowość (kod)</label>
+                        <input id="city-to" type="text" class="input-size-cargo rounded display-table-cell align-input-text" value="(39-200) Dębica" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,5 @@
 ﻿using Abp.Authorization.Roles;
+using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
 using Abp.Runtime.Session;
 using Exchange.Core.MultiTenancy;
@@ -15,9 +16,11 @@ namespace Exchange.Core.Authorization
     {
         public RoleStore(
             IRepository<Role> roleRepository,
+            IRepository<UserRole, long> userRoleRepository,
             IRepository<RolePermissionSetting, long> rolePermissionSettingRepository)
             : base(
                 roleRepository,
+                userRoleRepository,
                 rolePermissionSettingRepository)
         {
             

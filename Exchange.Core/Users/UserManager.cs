@@ -1,8 +1,11 @@
 ﻿using Abp.Authorization;
 using Abp.Authorization.Users;
+using Abp.Configuration;
 using Abp.Configuration.Startup;
+using Abp.Dependency;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Zero.Configuration;
 using Exchange.Core.Authorization;
 using Exchange.Core.MultiTenancy;
 using System;
@@ -21,14 +24,20 @@ namespace Exchange.Core.Users
             IRepository<Tenant> tenantRepository,
             IMultiTenancyConfig multiTenancyConfig,
             IPermissionManager permissionManager,
-            IUnitOfWorkManager unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            ISettingManager settingManager,
+            IUserManagementConfig userManagementConfig,
+            IIocResolver iocResolver)
             : base(
                 store,
                 roleManager,
                 tenantRepository,
                 multiTenancyConfig,
                 permissionManager,
-                unitOfWorkManager)
+                unitOfWorkManager,
+                settingManager,
+                userManagementConfig,
+                iocResolver)
         {
         }
     }

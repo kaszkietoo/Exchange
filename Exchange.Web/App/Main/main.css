@@ -61,11 +61,18 @@ body {
 }
 
 .display-direction-indicator {    
-    font-size: 2em;
+    font-size: 2em;    
+}
+
+.place-direction-indicator {
     margin-top: 40px;
 }
 
-.align-text-center {
-    text-align: center;
+.place-direction-indicator-filter {
+    margin-top: 20px;
+}
+
+.align-input-text {
+    padding-left: 3px;
 }
 

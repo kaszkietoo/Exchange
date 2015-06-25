@@ -23,13 +23,13 @@
                                 </select>
                             </td>
                             <td>
-                                <input id="capacity" class="input-size-cargo rounded align-text-center" type="number" min="0.1" step="0.1" max="20.0" value="1.0" /> t
+                                <input id="capacity" class="input-size-cargo rounded align-input-text" type="number" min="0.1" step="0.1" max="20.0" value="1.0" /> t
                             </td>
                             <td>
-                                <input id="length" class="input-size-cargo rounded align-text-center" type="number" min="0.1" step="0.1" max="20.0" value="1.0" /> m
+                                <input id="length" class="input-size-cargo rounded align-input-text" type="number" min="0.1" step="0.1" max="20.0" value="1.0" /> m
                             </td>
                             <td>
-                                <input id="freight-price" class="input-size-cargo rounded align-text-center" type="number" min="100" step="20" max="2000" value="100" />
+                                <input id="freight-price" class="input-size-cargo rounded align-input-text" type="number" min="100" step="20" max="2000" value="100" />
                                 <select id="freight-price-currency" class="input-size-cargo rounded">
                                     <option value="PLN">PLN</option>
                                     <option value="EUR">EUR</option>
@@ -42,7 +42,7 @@
                                 </select>
                             </td>
                             <td>
-                                <input id="partial-load" class="input-size-cargo align-text-center" type="checkbox" />
+                                <input id="partial-load" class="input-size-cargo align-input-text" type="checkbox" />
                             </td>
                         </tr>
                     </tbody>
@@ -64,14 +64,14 @@
                     </div>
                     <div id="route-from-city" class="display-table-row">
                         <label for="city-from" class="display-table-cell">Miejscowość (kod)</label>
-                        <input id="city-from" type="text" class="input-size-cargo rounded display-table-cell align-text-center" value="(30-072) Kraków" />
+                        <input id="city-from" type="text" class="input-size-cargo rounded display-table-cell align-input-text" value="(30-072) Kraków" />
                     </div>
                     <div id="route-loading-date" class="display-table-row">
                         <label for="loading-date" class="display-table-cell">Data załadunku</label>
-                        <input id="loading-date" type="datetime" class="input-size-cargo rounded display-table-cell align-text-center" value="2015-07-01 20:00" />
+                        <input id="loading-date" type="datetime" class="input-size-cargo rounded display-table-cell align-input-text" value="2015-07-01 20:00" />
                     </div>
                 </div>
-                <div id="direction-indicator" class="col-md-2 display-direction-indicator align-text-center">
+                <div id="direction-indicator" class="col-md-2 display-direction-indicator place-direction-indicator" style="text-align: center;">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" />
                 </div>
                 <div id="route-to" class="col-md-5 display-table">
@@ -84,14 +84,15 @@
                     </div>
                     <div id="route-to-city" class="display-table-row">
                         <label for="city-to" class="display-table-cell">Miejscowość (kod)</label>
-                        <input id="city-to" type="text" class="input-size-cargo rounded display-table-cell align-text-center" value="(39-200) Dębica" />
+                        <input id="city-to" type="text" class="input-size-cargo rounded display-table-cell align-input-text" value="(39-200) Dębica" />
                     </div>
                     <div id="route-unloading-date" class="display-table-row">
                         <label for="unloading-date" class="display-table-cell">Data rozładunku</label>
-                        <input id="unloading-date" type="datetime" class="input-size-cargo rounded display-table-cell align-text-center" value="2015-07-02 15:00" />
+                        <input id="unloading-date" type="datetime" class="input-size-cargo rounded display-table-cell align-input-text" value="2015-07-02 15:00" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <button type="button" class="btn btn-success">Zgłoś</button>
 </div>

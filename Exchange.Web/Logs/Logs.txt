@@ -2805,3 +2805,68 @@ DEBUG 2015-06-06 20:22:11,354 [19   ] Default                                  -
 DEBUG 2015-06-06 20:22:12,294 [19   ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
 DEBUG 2015-06-06 20:22:12,299 [19   ] Abp.Localization.LocalizationManager     - Initialized localization source: Exchange
 DEBUG 2015-06-06 20:22:12,300 [19   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-09 12:39:09,210 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-09 12:39:19,636 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-06-09 12:39:19,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.5.14.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.5.14.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeApplicationModule, Exchange.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeCoreModule, Exchange.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,651 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeDataModule, Exchange.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,651 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.Web.ExchangeWebModule, Exchange.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,651 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeWebApiModule, Exchange.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-09 12:39:19,673 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-06-09 12:39:20,979 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-09 12:39:23,477 [1    ] Default                                  - Dynamic web api controller is created for type 'Exchange.Application.Orders.IOrdersAppService' with service name 'app/orders'.
+DEBUG 2015-06-09 12:39:25,104 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-09 12:39:25,175 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Exchange
+DEBUG 2015-06-09 12:39:25,177 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-25 14:08:33,985 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-25 14:08:41,269 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-06-25 14:08:41,274 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.5.14.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.5.14.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeApplicationModule, Exchange.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeCoreModule, Exchange.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeDataModule, Exchange.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.Web.ExchangeWebModule, Exchange.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,278 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeWebApiModule, Exchange.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:08:41,283 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-06-25 14:08:42,572 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-25 14:08:45,177 [1    ] Default                                  - Dynamic web api controller is created for type 'Exchange.Application.Orders.IOrdersAppService' with service name 'app/orders'.
+DEBUG 2015-06-25 14:08:47,331 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2015-06-25 14:08:47,361 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Exchange
+DEBUG 2015-06-25 14:08:47,390 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-06-25 14:38:15,502 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-06-25 14:38:19,893 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-06-25 14:38:19,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.3.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.5.11.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.5.14.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeApplicationModule, Exchange.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeCoreModule, Exchange.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,908 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeDataModule, Exchange.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,908 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.Web.ExchangeWebModule, Exchange.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,908 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Exchange.ExchangeWebApiModule, Exchange.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-06-25 14:38:19,914 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-06-25 14:38:23,096 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes defines auto mapping attributes
+DEBUG 2015-06-25 14:38:27,399 [1    ] Default                                  - Dynamic web api controller is created for type 'Exchange.Application.Orders.IOrdersAppService' with service name 'app/orders'.
+DEBUG 2015-06-25 14:38:45,367 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-06-25 14:38:45,378 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-06-25 14:38:45,621 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-06-25 14:38:45,623 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Exchange
+DEBUG 2015-06-25 14:38:45,624 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb

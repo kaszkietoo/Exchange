@@ -32,16 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp">
-      <HintPath>..\packages\Abp.0.5.11.0\lib\net451\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=0.6.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Abp.0.6.3.1\lib\net451\Abp.dll</HintPath>
     </Reference>
     <Reference Include="Abp.EntityFramework, Version=0.5.11.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Abp.EntityFramework.0.5.11.0\lib\net451\Abp.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Zero, Version=0.5.14.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Zero, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Abp.Zero.0.5.14.0\lib\net451\Abp.Zero.dll</HintPath>
+      <HintPath>..\packages\Abp.Zero.0.6.4.0\lib\net451\Abp.Zero.dll</HintPath>
     </Reference>
     <Reference Include="Abp.Zero.EntityFramework">
       <HintPath>..\packages\Abp.Zero.EntityFramework.0.5.14.0\lib\net451\Abp.Zero.EntityFramework.dll</HintPath>
@@ -71,7 +72,7 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
