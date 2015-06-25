@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using System.Threading;
 
 namespace Exchange
 {
@@ -10,6 +11,11 @@ namespace Exchange
         protected ExchangeAppServiceBase()
         {
             LocalizationSourceName = ExchangeConsts.LocalizationSourceName;
+        }
+
+        protected string UserName
+        {
+            get { return Thread.CurrentPrincipal.Identity.Name; }
         }
     }
 }

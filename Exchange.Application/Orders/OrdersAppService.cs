@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Exchange.Application.Orders
 {
-    public class OrdersAppService : IOrdersAppService    
+    public class OrdersAppService : ExchangeAppServiceBase, IOrdersAppService
     {       
         [AbpAuthorize("CanTest2")]
         public void TestAppService()
         {
-                                                   
+                                                                          
         }
     }
 }
