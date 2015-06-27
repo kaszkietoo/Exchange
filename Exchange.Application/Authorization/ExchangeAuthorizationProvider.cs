@@ -12,8 +12,7 @@ namespace Exchange.Application.Authorization
     {
         public override void SetPermissions(IPermissionDefinitionContext context)
         {
-            context.CreatePermission("CanTestAppService", new FixedLocalizableString("Can user test"));
-            context.CreatePermission("CanTest2", new FixedLocalizableString("Can user test v2"));
+            context.CreatePermission("CanAddOrder", new FixedLocalizableString("Can add order"));            
         }
     }
 }

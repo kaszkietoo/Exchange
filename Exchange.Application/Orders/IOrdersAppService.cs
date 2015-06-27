@@ -9,6 +9,6 @@ namespace Exchange.Application.Orders
 {
     public interface IOrdersAppService : IApplicationService
     {
-        void TestAppService();
+        void AddOrder(OrderDto order);
     }
 }

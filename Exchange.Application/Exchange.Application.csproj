@@ -97,6 +97,7 @@
     <Compile Include="ExchangeApplicationModule.cs" />
     <Compile Include="ExchangeAppServiceBase.cs" />
     <Compile Include="Orders\IOrdersAppService.cs" />
+    <Compile Include="Orders\OrderDto.cs" />
     <Compile Include="Orders\OrdersAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

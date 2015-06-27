@@ -1,8 +1,11 @@
 ﻿using Abp.EntityFramework;
 using Abp.Zero.EntityFramework;
 using Exchange.Core.Authorization;
+using Exchange.Core.Entities;
 using Exchange.Core.MultiTenancy;
 using Exchange.Core.Users;
+using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace Exchange.EntityFramework
 {
@@ -19,5 +22,7 @@ namespace Exchange.EntityFramework
         {
 
         }
+
+        public virtual IDbSet<Order> Orders { get; set; }
     }
 }

@@ -111,6 +111,14 @@
     <Compile Include="Migrations\201506251602173_Added_AuthorizationSource_To_User.Designer.cs">
       <DependentUpon>201506251602173_Added_AuthorizationSource_To_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506271121304_OrderEntityAdded.cs" />
+    <Compile Include="Migrations\201506271121304_OrderEntityAdded.Designer.cs">
+      <DependentUpon>201506271121304_OrderEntityAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506272203078_OrderTypeAdded.cs" />
+    <Compile Include="Migrations\201506272203078_OrderTypeAdded.Designer.cs">
+      <DependentUpon>201506272203078_OrderTypeAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ExchangeDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506251602173_Added_AuthorizationSource_To_User.resx">
       <DependentUpon>201506251602173_Added_AuthorizationSource_To_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506271121304_OrderEntityAdded.resx">
+      <DependentUpon>201506271121304_OrderEntityAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506272203078_OrderTypeAdded.resx">
+      <DependentUpon>201506272203078_OrderTypeAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

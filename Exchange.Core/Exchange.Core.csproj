@@ -87,6 +87,7 @@
     <Compile Include="Authorization\Role.cs" />
     <Compile Include="Authorization\RoleManager.cs" />
     <Compile Include="Authorization\RoleStore.cs" />
+    <Compile Include="Entities\Order.cs" />
     <Compile Include="ExchangeConsts.cs" />
     <Compile Include="ExchangeCoreModule.cs" />
     <Compile Include="ExchangeSession.cs" />
@@ -100,6 +101,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
