@@ -24,5 +24,6 @@ namespace Exchange.EntityFramework
         }
 
         public virtual IDbSet<Order> Orders { get; set; }
+        public virtual IDbSet<Offer> Offers { get; set; }
     }
 }

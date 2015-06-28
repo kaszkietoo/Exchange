@@ -42,9 +42,10 @@
                 <accordion-heading>
                     <b>{{freight.countryFrom}} {{freight.cityFrom}}</b> > <b>{{freight.countryTo}} {{freight.cityTo}}</b> <br />
                     {{freight.loadingDate}} > {{freight.unloadingDate}} <br />
-                    {{freight.carBody}} {{freight.capacity}}t {{freight.length}}m
+                    {{freight.carBody}} {{freight.capacity}}t {{freight.length}}m                    
                     <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                 </accordion-heading>
+                <button ng-click="sentOffer(freight)" type="button" class="btn btn-success" ng-disabled="freight.wasOfferSent">Wyślij ofertę</button>
             </accordion-group>
         </accordion>
     </div>

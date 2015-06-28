@@ -119,6 +119,14 @@
     <Compile Include="Migrations\201506272203078_OrderTypeAdded.Designer.cs">
       <DependentUpon>201506272203078_OrderTypeAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506281609056_OfferEntityAdded.cs" />
+    <Compile Include="Migrations\201506281609056_OfferEntityAdded.Designer.cs">
+      <DependentUpon>201506281609056_OfferEntityAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506281637449_ForeignKeyOrderOfferAdded.cs" />
+    <Compile Include="Migrations\201506281637449_ForeignKeyOrderOfferAdded.Designer.cs">
+      <DependentUpon>201506281637449_ForeignKeyOrderOfferAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ExchangeDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506272203078_OrderTypeAdded.resx">
       <DependentUpon>201506272203078_OrderTypeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506281609056_OfferEntityAdded.resx">
+      <DependentUpon>201506281609056_OfferEntityAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506281637449_ForeignKeyOrderOfferAdded.resx">
+      <DependentUpon>201506281637449_ForeignKeyOrderOfferAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

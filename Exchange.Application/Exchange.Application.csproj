@@ -96,6 +96,9 @@
     <Compile Include="Authorization\ExchangeAuthorizationProvider.cs" />
     <Compile Include="ExchangeApplicationModule.cs" />
     <Compile Include="ExchangeAppServiceBase.cs" />
+    <Compile Include="Offers\IOffersAppService.cs" />
+    <Compile Include="Offers\OfferDto.cs" />
+    <Compile Include="Offers\OffersAppService.cs" />
     <Compile Include="Orders\IOrdersAppService.cs" />
     <Compile Include="Orders\OrderDto.cs" />
     <Compile Include="Orders\OrdersAppService.cs" />

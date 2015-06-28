@@ -87,6 +87,7 @@
     <Compile Include="Authorization\Role.cs" />
     <Compile Include="Authorization\RoleManager.cs" />
     <Compile Include="Authorization\RoleStore.cs" />
+    <Compile Include="Entities\Offer.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="ExchangeConsts.cs" />
     <Compile Include="ExchangeCoreModule.cs" />

@@ -22,5 +22,7 @@ namespace Exchange.Application.Orders
         public string CityTo { get; set; }        
         public string UnloadingDate { get; set; }
         public string Type { get; set; }
+        public bool WasOfferSent { get; set; }
+        public long Id { get; set; }
     }
 }

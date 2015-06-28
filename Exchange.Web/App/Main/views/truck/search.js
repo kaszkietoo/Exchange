@@ -1,7 +1,7 @@
 ﻿(function () {
     var controllerId = 'app.views.truck.search';
     angular.module('app').controller(controllerId, [
-        '$scope', 'abp.services.app.orders', function ($scope, ordersService) {
+        '$scope', 'abp.services.app.orders', 'abp.services.app.offers', function ($scope, ordersService, offersService) {
             var vm = this;
 
             vm.trucks = [];
@@ -16,6 +16,16 @@
             ordersService.getTrucks(config).success(function (data) {
                 vm.trucks = data.orders;
             });
+
+            $scope.sentOffer = function (truck) {
+
+                var data = {
+                    orderId: truck.id
+                };
+
+                offersService.addOffer(data, config);
+                truck.wasOfferSent = true;
+            };
         }
     ]);
 })();
