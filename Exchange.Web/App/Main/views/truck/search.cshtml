@@ -35,4 +35,12 @@
             </div>
         </div>
     </div>
+
+    <div ng-init="trucks">
+        <ul class="list-group" ng-repeat="truck in vm.trucks">
+            <div class="list-group-item">
+                {{truck.carBody}}
+            </div>
+        </ul>
+    </div>
 </div>

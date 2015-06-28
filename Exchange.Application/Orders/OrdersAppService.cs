@@ -29,7 +29,51 @@ namespace Exchange.Application.Orders
                 .ForMember(o => o.UnloadingDate, opts => opts.UseValue(DateTime.Parse(order.UnloadingDate)));                
             var orderEntity = Mapper.Map<OrderDto, Order>(order);
 
-            await _ordersRepository.InsertAsync(orderEntity);
+            await _ordersRepository.InsertAsync(orderEntity);                        
         }
+
+        public OrdersOutput GetFreights()
+        {
+            var freights = _ordersRepository
+                .GetAllList(o => o.CreatorUserId != AbpSession.UserId && o.Type.Equals("freight"));
+
+            var freightDtos = new List<OrderDto>();
+
+            foreach (var freight in freights)
+            {
+                Mapper.CreateMap<Order, OrderDto>()
+                .ForMember(o => o.LoadingDate, opts => opts.UseValue(freight.LoadingDate.ToString()))
+                .ForMember(o => o.UnloadingDate, opts => opts.UseValue(freight.UnloadingDate.ToString()));
+
+                freightDtos.Add(Mapper.Map<Order, OrderDto>(freight));
+            }
+
+            return new OrdersOutput
+            {
+                Orders = freightDtos
+            };
+        }
+
+        public OrdersOutput GetTrucks()
+        {
+            var trucks = _ordersRepository
+                .GetAllList(o => o.CreatorUserId != AbpSession.UserId && o.Type.Equals("truck"));
+
+            var truckDtos = new List<OrderDto>();
+
+            foreach (var truck in trucks)
+            {
+                Mapper.CreateMap<Order, OrderDto>()
+                .ForMember(o => o.LoadingDate, opts => opts.UseValue(truck.LoadingDate.ToString()))
+                .ForMember(o => o.UnloadingDate, opts => opts.UseValue(truck.UnloadingDate.ToString()));
+
+                truckDtos.Add(Mapper.Map<Order, OrderDto>(truck));
+            }
+
+            return new OrdersOutput
+            {
+                Orders = truckDtos
+            };
+        }        
     }
 }

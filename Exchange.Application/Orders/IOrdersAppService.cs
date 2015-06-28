@@ -10,5 +10,7 @@ namespace Exchange.Application.Orders
     public interface IOrdersAppService : IApplicationService
     {
         void AddOrder(OrderDto order);
+        OrdersOutput GetFreights();
+        OrdersOutput GetTrucks();
     }
 }
