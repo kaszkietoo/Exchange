@@ -1,5 +1,5 @@
 ﻿<div ng-controller="app.views.truck.search as vm">
-    <h4><span class="label label-primary rounded">Filtruj</span></h4>
+    @*<h4><span class="label label-primary rounded">Filtruj</span></h4>
     <div id="route-filter">
         <div class="panel panel-default rounded">
             <div class="panel-body">
@@ -34,13 +34,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 
     <div ng-init="trucks">
-        <ul class="list-group" ng-repeat="truck in vm.trucks">
-            <div class="list-group-item">
-                {{truck.carBody}}
-            </div>
-        </ul>
+
+        <accordion>
+            <accordion-group ng-repeat="truck in vm.trucks" is-open="status.open">
+                <accordion-heading>
+                    <b>{{truck.countryFrom}} {{truck.cityFrom}}</b> > <b>{{truck.countryTo}} {{truck.cityTo}}</b> <br />
+                    {{truck.loadingDate}} > {{truck.unloadingDate}} <br />
+                    {{truck.carBody}} {{truck.capacity}}t {{truck.length}}m
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                </accordion-heading>
+            </accordion-group>        
+        </accordion>
     </div>
 </div>
