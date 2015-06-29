@@ -127,6 +127,10 @@
     <Compile Include="Migrations\201506281637449_ForeignKeyOrderOfferAdded.Designer.cs">
       <DependentUpon>201506281637449_ForeignKeyOrderOfferAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506291948087_IsClosedPropertyAddedToOrder.cs" />
+    <Compile Include="Migrations\201506291948087_IsClosedPropertyAddedToOrder.Designer.cs">
+      <DependentUpon>201506291948087_IsClosedPropertyAddedToOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ExchangeDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506281637449_ForeignKeyOrderOfferAdded.resx">
       <DependentUpon>201506281637449_ForeignKeyOrderOfferAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506291948087_IsClosedPropertyAddedToOrder.resx">
+      <DependentUpon>201506291948087_IsClosedPropertyAddedToOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

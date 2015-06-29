@@ -1,3 +1,48 @@
 ﻿<div ng-controller="app.views.offers as vm">
-    <p>Offers</p>
+    <div ng-init="orders">
+        <accordion>
+            <accordion-group ng-repeat="order in vm.orders" is-open="status.open">
+                <accordion-heading>
+                    <b>{{order.countryFrom}} {{order.cityFrom}}</b> > <b>{{order.countryTo}} {{order.cityTo}}</b> <br />
+                    {{order.loadingDate}} > {{order.unloadingDate}} <br />
+                    {{order.carBody}} {{order.capacity}}t {{order.length}}m {{order.type}}
+                    <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                </accordion-heading>
+                
+                <div id="order-info">
+                    <div class="panel panel-default rounded">
+                        <div class="panel-body">
+                            <table class="stretched">
+                                <thead>
+                                    <tr>
+                                        <th>Nazwa użytkownika</th>
+                                        <th>Status</th>
+                                        <th>Data złożenia</th>
+                                        <th></th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="offer in order.offers">
+                                        <td>                     
+                                            {{offer.creatorUserName}}                       
+                                        </td>
+                                        <td>
+                                            {{offer.status}}
+                                        </td>
+                                        <td>
+                                            {{offer.creationTime}}
+                                        </td>
+                                        <td>
+                                            <button ng-click="acceptOffer(offer, order.id)" type="button" class="btn btn-success" ng-disabled="order.isClosed">Zaakceptuj</button>                                            
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                                                
+            </accordion-group>
+        </accordion>
+    </div>
 </div>

@@ -13,7 +13,17 @@ namespace Exchange.Core.Entities
     {
         public Offer()
         {
-            Status = "Pending";
+            Status = "Oczekuje";
+        }
+
+        public void Accept()
+        {
+            Status = "Zaakceptowana";
+        }
+
+        public void Reject()
+        {
+            Status = "Odrzucona";
         }
 
         [Required]        

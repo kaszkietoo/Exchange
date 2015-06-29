@@ -17,9 +17,9 @@ namespace Exchange.Web.Controllers
     {
         private readonly UserManager _userManager;
 
-        public UsersController(UserManager userManager, IAbpSession session)
+        public UsersController(UserManager userManager)
         {
-            _userManager = userManager;
+            _userManager = userManager;            
         }
 
         [HttpPost]

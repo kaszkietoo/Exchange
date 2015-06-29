@@ -10,6 +10,16 @@ namespace Exchange.Core.Entities
 {
     public class Order : FullAuditedEntity<long>
     {
+        public Order()
+        {
+            IsClosed = false;
+        }
+
+        public void Close()
+        {
+            IsClosed = true;
+        }
+
         [Required]
         public virtual string CarBody { get; protected set; }
         [Required]
@@ -38,5 +48,7 @@ namespace Exchange.Core.Entities
         public virtual DateTime UnloadingDate { get; protected set; }
         [Required]
         public virtual string Type { get; protected set; }
+        [Required]
+        public virtual bool IsClosed { get; protected set; }
     }
 }

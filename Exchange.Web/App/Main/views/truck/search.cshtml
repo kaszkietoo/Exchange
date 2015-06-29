@@ -46,7 +46,8 @@
                     {{truck.carBody}} {{truck.capacity}}t {{truck.length}}m
                     <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                 </accordion-heading>
-                <button ng-click="sentOffer(truck)" type="button" class="btn btn-success" ng-disabled="truck.wasOfferSent">Wyślij ofertę</button>
+                <b>Cena za km: </b>{{truck.price}} {{truck.currency}} <br/>
+                <button ng-click="sendOffer(truck)" type="button" class="btn btn-success" ng-disabled="truck.wasOfferSent">Wyślij ofertę</button>
             </accordion-group>        
         </accordion>
     </div>

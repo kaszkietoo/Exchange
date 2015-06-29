@@ -1,6 +1,7 @@
 ﻿using Abp.Authorization;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using Exchange.Application.Offers;
 using Exchange.Core.Entities;
 using Exchange.Core.Users;
 using System;
@@ -16,11 +17,16 @@ namespace Exchange.Application.Orders
     {
         private readonly IRepository<Order, long> _ordersRepository;
         private readonly IRepository<Offer, long> _offerRepository;
+        private readonly UserManager _userManager;
 
-        public OrdersAppService(IRepository<Order, long> ordersRepository, IRepository<Offer, long> offerRepository)
+        public OrdersAppService(
+            IRepository<Order, long> ordersRepository, 
+            IRepository<Offer, long> offerRepository,
+            UserManager userManager)
         {
             _ordersRepository = ordersRepository;
             _offerRepository = offerRepository;
+            _userManager = userManager;
         }
 
         [AbpAuthorize("CanAddOrder")]
@@ -37,7 +43,9 @@ namespace Exchange.Application.Orders
         public OrdersOutput GetFreights()
         {
             var freights = _ordersRepository
-                .GetAllList(o => o.CreatorUserId != AbpSession.UserId && o.Type.Equals("freight"));
+                .GetAllList(o => o.CreatorUserId != AbpSession.UserId 
+                    && o.Type.Equals("Ładunek")
+                    && !o.IsClosed);
 
             var freightDtos = new List<OrderDto>();
 
@@ -62,7 +70,9 @@ namespace Exchange.Application.Orders
         public OrdersOutput GetTrucks()
         {
             var trucks = _ordersRepository
-                .GetAllList(o => o.CreatorUserId != AbpSession.UserId && o.Type.Equals("truck"));
+                .GetAllList(o => o.CreatorUserId != AbpSession.UserId 
+                    && o.Type.Equals("Pojazd")
+                    && !o.IsClosed);
 
             var truckDtos = new List<OrderDto>();
 
@@ -84,6 +94,46 @@ namespace Exchange.Application.Orders
             {
                 Orders = truckDtos
             };
-        }        
+        }
+
+
+        public async Task<OrdersOutput> GetUserOrders()
+        {
+            var userOrders = _ordersRepository.GetAllList(o => o.CreatorUserId == AbpSession.UserId);
+            var orderDtos = new List<OrderDto>();
+            
+            foreach (var order in userOrders)
+            {
+                Mapper.CreateMap<Order, OrderDto>()
+                .ForMember(o => o.LoadingDate, opts => opts.MapFrom(t => t.LoadingDate.ToString()))
+                .ForMember(o => o.UnloadingDate, opts => opts.MapFrom(t => t.UnloadingDate.ToString()));
+
+
+                var orderDto = Mapper.Map<Order, OrderDto>(order);
+                var offers = _offerRepository.GetAllList(o => o.OrderId == order.Id);
+                var offerDtos = new List<OfferDto>();
+
+                foreach (var offer in offers)
+                {
+                    var offerOwner = await _userManager.GetUserByIdAsync(offer.CreatorUserId.Value);
+                    var offerDto = new OfferDto
+                    {
+                        CreatorUserName = offerOwner.UserName,
+                        Status = offer.Status,
+                        Id = offer.Id,
+                        CreationTime = offer.CreationTime.ToString()                        
+                    };                    
+                    offerDtos.Add(offerDto);
+                }
+
+                orderDto.Offers = offerDtos;
+                orderDtos.Add(orderDto);
+            }
+
+            return new OrdersOutput 
+            {
+                Orders = orderDtos
+            };
+        }
     }
 }

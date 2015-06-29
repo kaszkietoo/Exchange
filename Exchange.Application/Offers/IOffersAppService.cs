@@ -10,5 +10,6 @@ namespace Exchange.Application.Offers
     public interface IOffersAppService : IApplicationService
     {
         void AddOffer(OfferDto offer);
+        void AcceptOffer(OfferDto offer);
     }
 }

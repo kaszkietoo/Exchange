@@ -12,5 +12,6 @@ namespace Exchange.Application.Orders
         void AddOrder(OrderDto order);
         OrdersOutput GetFreights();
         OrdersOutput GetTrucks();
+        Task<OrdersOutput> GetUserOrders();
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exchange.Application.Offers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,7 @@ namespace Exchange.Application.Orders
         public string Type { get; set; }
         public bool WasOfferSent { get; set; }
         public long Id { get; set; }
+        public bool IsClosed { get; set; }
+        public List<OfferDto> Offers { get; set; }
     }
 }
