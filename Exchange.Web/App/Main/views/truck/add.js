@@ -14,43 +14,51 @@
 
             $scope.country_from = "PL";
             $scope.city_from = "(30-072) Kraków";
-            $scope.loading_date = "2015-07-01 20:00";
+            $scope.loading_date = "";
 
             $scope.country_to = "PL";
             $scope.city_to = "(39-200) Dębica";
-            $scope.unloading_date = "2015-07-02 15:00";
+            $scope.unloading_date = "";
 
             $scope.submit = function () {
-                var config = {
-                    headers: {
-                        //'X-Token': 'waY6ybEUGUbQ4NgNFohlCWxamoXkCGjA3apK9K2XJ9a1Tim+yCfIUHBGYYuw9QyxccALhpu8Gk7a+B8e//Dyc/jOn3VOJmADd6pONRaDGx43HTvifYnI0nnP0xp5GSe9y+cyQgbyzqVRIR0B+9Q3yew9JRpKbyUiHcY+apd/wlWTx6WQfOIdft9L5Wbd6RM/WguMizO76Kq+kMgTYdxGQu+Ak5rf3CdmYqnL9Af9RLRxO/LiniIOCxT60x/9AzymSI7kSU9ppamP5npcJo6mc/RRK7/j5hKFriBqrsa4pl8nI8c5jMA1YHT/aISu0M+hR8BVT1yjzrtTC9D4+LiRBg=='
-                        'X-Token': 'Wejq5wVE4Hh3QmPPm7kEqqOne2DE4mDc2vrrVsnFAtVH+t6pdNRbS/c1a2TKveS/3EUb4QfBNKLuyZmmHc1u9HFImT/6mMV8GKFhghXSeMU0CD15/ky7iH8brdgenudQmaqGoY/qZ6D1lN0TAEtATLSB4mqPN3Jh1r90LZkJlxp+/Yst+48PS4ih0+WAQat0LZ/kxtUMzq8DHbZiK61AZW31ODHuDYGH4xFxuZC4k6/DpmWOQar7m+mPuA93rFjzoAZihduCSOsI6Cylw5QKCiYkEX0uw0JEnw0zvoByBP6cRRuzl7twvEvNaYhj0TINl9is6CvoqdDy23Ck9c7wPg=='
-                        //'X-Token': 'qDROm7en6GZBQchSXWuPAQ5tlLwpEoSc4/nBXWZH2+RzyX9zdi/VlPCJ2GqhIFhXJNJkHADlstcF8TfkBfMgIS2VGrj9Iiu+5ewPEUDYx19C/Jeujke8y20aUOpInkWuroK8Ts5C3zRumvMGyVHS9Y6vTbfWLaEwfGn1rBwLov/QFeEvcFRi1FNh+xR2JTTlD82Mmp/K4E6kHY/iRHDvwVmUcDBq/ol8qE0IMz0tGUt3S4u/nnLPChHSHVdksf28xxGq2X+/oWjCIp+YBqJn3qL6V0ASp0bRqp+yXdKLyFM8Swi4If1Jg8MtnC57Roo6rXAWYWUdytEWqAsx4jRBMw=='
-                    }
-                };
 
-                var data = {
+                var loading = new Date($scope.loading_date);
+                var unloading = new Date($scope.unloading_date);
 
-                    CarBody: $scope.car_body,
-                    Capacity: $scope.capacity,
-                    Length: $scope.length,
-                    Price: $scope.price,
-                    Currency: $scope.currency,
-                    Visibility: $scope.visibility,
-                    Partial: $scope.partial,
-                    CountryFrom: $scope.country_from,
-                    CityFrom: $scope.city_from,
-                    LoadingDate: $scope.loading_date,
-                    CountryTo: $scope.country_to,
-                    CityTo: $scope.city_to,
-                    UnloadingDate: $scope.unloading_date,
-                    Type: 'Pojazd'
-                };
+                if (loading > unloading) {
+                    abp.notify.error('Data załadunku musi poprzedzać datę rozładunku!');
+                }
+                else {
 
-                abp.ui.setBusy(null,                    
-                ordersService.addOrder(data, config).success(function () {
-                    abp.notify.info('Dodano nowy pojazd!');
-                }));
+                    var config = {
+                        headers: {
+                            'X-Token': 'Wytekf/t76/wNvYbgDYzr3pVnATXeI3vmbB1QZzOAuSSE69bIDyWM9GdozFkp81H7xFkZPab8vhqacCJbE7qMM/ZQPEEHeqBL4gTrcPj6dfp5B0Ll2Ck9tKDN6sEfcQdrFHFgSR2q56Iw1O6yR0i7D4zhA4zDQZA3L050yv8P1aLK8zydL5LGQCF9tg3RUvXQQLbsIW9I0poRnNVg2Pt9maLd474+SgWjqGAwk2OfrzMGI06Vy6KSf+YYeTZy73CF7EbMYxrT8rn8ZWWRBSliePxCNSvdt5HIJp7En3BBbOHTMHdn5QJy4Cb4CfXsg+59UVsYkL82Ys+SO1bb3DruA=='
+                        }
+                    };
+
+                    var data = {
+
+                        CarBody: $scope.car_body,
+                        Capacity: $scope.capacity,
+                        Length: $scope.length,
+                        Price: $scope.price,
+                        Currency: $scope.currency,
+                        Visibility: $scope.visibility,
+                        Partial: $scope.partial,
+                        CountryFrom: $scope.country_from,
+                        CityFrom: $scope.city_from,
+                        LoadingDate: $scope.loading_date,
+                        CountryTo: $scope.country_to,
+                        CityTo: $scope.city_to,
+                        UnloadingDate: $scope.unloading_date,
+                        Type: 'Pojazd'
+                    };
+
+                    abp.ui.setBusy(null,
+                    ordersService.addOrder(data, config).success(function () {
+                        abp.notify.info('Dodano nowy pojazd!');
+                    }));
+                }
             };
         }
     ]);
